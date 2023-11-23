@@ -126,13 +126,6 @@ public class Student {
 		this.date = dateOfSurvey;
 	}
 
-//    public String getLikedOptions() {
-//        return likedOptions;
-//    }
-//
-//    public void setLikedOptions(String likedOptions) {
-//        this.likedOptions = likedOptions;
-//    }
 	public String getLikelihoodToRecommend() {
 		return likelihoodToRecommend;
 	}
@@ -162,14 +155,14 @@ public class Student {
 	private Map<String, Boolean> likedOptions;
 
     
-    @Column(name = "likelihood_to_recommend")
+    @Column(name = "likelihood_to_recommend", nullable = true)
     private String likelihoodToRecommend; 
     
     @Enumerated(EnumType.STRING)
-    @Column(name = "source_of_interest")
+    @Column(name = "source_of_interest", nullable = true)
     private SourceOfInterest sourceOfInterest;
     
-    @Column(name = "comments")
+    @Column(name = "comments", nullable = true)
     private String comments;
 	public SourceOfInterest getSourceOfInterest() {
 		return sourceOfInterest;
